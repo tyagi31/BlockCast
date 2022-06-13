@@ -7,7 +7,8 @@ let speed =2;
 let lastPaintTime =0;
 let snakeArr = [
     {x:13 , y: 15}
-]
+];
+food = {x:6, y:7};
 
 
 //game functions
@@ -24,14 +25,20 @@ function main(ctime){
 }
 
 function gameEngine(){
-    board  .innerHTML = "";
-    snakeArr.forEach((e, index) => {
+    board.innerHTML = "";
+    snakeArr.forEach((e, index)=>{
         snakeElement = document.createElement('div');
         snakeElement.style.gridRowStart = e.y;
         snakeElement.style.gridColumnStart = e.x;
-        snakeElement.classList.add('food')
-        board.appendChild(snakeElement);
         
+    });
+
+    snakeElement = document.createElement('div');
         
-    })
+        foodElement.style.gridRowStart = food.y;
+       foodElement.style.gridColumnStart = food.x;
+       foodElement.classList.add('food');
+       board.appendChild(foodElement);
+
+
 }

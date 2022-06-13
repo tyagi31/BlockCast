@@ -37,6 +37,11 @@
     background-color: red
 }
 
-.food{
+.snake{
   background-color: blueviolet;
 }
+
+.food{
+    background-color: yellow;
+}
+
